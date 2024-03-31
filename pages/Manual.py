@@ -12,12 +12,12 @@ st.set_page_config(
 st.title('Fake News Detector User Manual')
 
 # Make sure to update to the latest URL
-app_url = 'https://share.streamlit.io/your-github-username/your-repo-name/main/Fake_News_App.py'
+app_url = 'https://2-stepfakenewsdetector.streamlit.app/'
 github_url = 'https://github.com/Jeisson-rojas/2_Steps_Fake_News_Detector' 
 
 # Description about the application
 st.header('Introduction')
-'Welcome to the Fake News Detector! This application is designed to help you distinguish between real and fake news articles. In today\'s digital age, where misinformation is rampant, it\'s essential to verify the authenticity of news sources. Our tool aims to assist you in making informed decisions by providing insights into the likelihood of news articles being fake.'
+'Welcome to the Fake News Detector! git init In today\'s digital age, where misinformation is rampant, it\'s essential to verify the authenticity of news sources. Our tool aims to assist you in making informed decisions by providing insights into the likelihood of news articles being fake.'
 'This prototype of our fake news detector is built with the upcoming US presidential election in mind. We understand the importance of identifying fake news and avoiding misinformation, especially during crucial events like elections. Our machine learning model, based on LSTM neural networks trained with a dataset of fake and real news, provides accurate predictions of news authenticity. For more details about our model, please visit our GitHub repository.'
 st.page_link(github_url, label='GitHub Repository', icon='🔗')
 

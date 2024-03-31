@@ -13,7 +13,7 @@ st.set_page_config(
 )
 
 # URLs for the app and GitHub repository
-app_url = 'https://share.streamlit.io/your-github-username/your-repo-name/main/Fake_News_App.py'
+app_url = 'https://2-stepfakenewsdetector.streamlit.app/'
 github_url = 'https://github.com/Jeisson-rojas/2_Steps_Fake_News_Detector' 
 
 # Set background image
