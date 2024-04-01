@@ -25,8 +25,8 @@ def get_img_as_base64(file):
     return base64.b64encode(data).decode()
 
 ## Get image files as base64 (binary data) to display in the app
-img_bg = get_img_as_base64("C:/Users/msksb/OneDrive - IE University/Documentos/VS/nlp_app/data/background.png")
-img_sidebar = get_img_as_base64("C:/Users/msksb/OneDrive - IE University/Documentos/VS/nlp_app/data/image.jpg")
+img_bg = get_img_as_base64("data/background.png")
+img_sidebar = get_img_as_base64("data/image.jpg")
 
 ## Settings for the background image using CSS
 page_bg_img = f"""
@@ -63,7 +63,7 @@ st.write(page_bg_img, unsafe_allow_html=True)
 
 # Load news data
 ## News data
-df_news = pd.read_excel('C:/Users/msksb/OneDrive - IE University/Documentos/VS/nlp_app/data/news_poc.xlsx')
+df_news = pd.read_excel('data/news_poc.xlsx')
 
 ## Define a function to extract opening sentences from news text
 def extract_first_few_words(text, num_words):
@@ -76,7 +76,7 @@ num_words = 30 # Number of words to extract
 df_news['Opening'] = df_news['Text'].apply(lambda x: extract_first_few_words(x, num_words))
 
 ## Close words in the similar news
-pr_excel = pd.read_excel('C:/Users/msksb/OneDrive - IE University/Documentos/VS/nlp_app/data/pagerank.xlsx', sheet_name=None)
+pr_excel = pd.read_excel('data/pagerank.xlsx', sheet_name=None)
 df_pr_real_news_1 = pr_excel['real_news_1']
 df_pr_real_news_2 = pr_excel['real_news_2']
 df_pr_fake_news_1 = pr_excel['fake_news_1']
@@ -84,16 +84,16 @@ df_pr_fake_news_2 = pr_excel['fake_news_2']
 
 # Load images
 ## Gauge icons for the probability of the news being fake 
-img_pt1 = Image.open('C:/Users/msksb/OneDrive - IE University/Documentos/VS/nlp_app/data/pt1.png')
-img_pt2 = Image.open('C:/Users/msksb/OneDrive - IE University/Documentos/VS/nlp_app/data/pt2.png')
-img_pt3 = Image.open('C:/Users/msksb/OneDrive - IE University/Documentos/VS/nlp_app/data/pt3.png')
-img_pt4 = Image.open('C:/Users/msksb/OneDrive - IE University/Documentos/VS/nlp_app/data/pt4.png')
+img_pt1 = Image.open('data/pt1.png')
+img_pt2 = Image.open('data/pt2.png')
+img_pt3 = Image.open('data/pt3.png')
+img_pt4 = Image.open('data/pt4.png')
 
 ## Word cloud images for each news
-img_wc_real_news_1 = Image.open('C:/Users/msksb/OneDrive - IE University/Documentos/VS/nlp_app/data/wc_real_news_1.jpg')
-img_wc_real_news_2 = Image.open('C:/Users/msksb/OneDrive - IE University/Documentos/VS/nlp_app/data/wc_real_news_2.jpg')
-img_wc_fake_news_1 = Image.open('C:/Users/msksb/OneDrive - IE University/Documentos/VS/nlp_app/data/wc_fake_news_1.jpg')
-img_wc_fake_news_2 = Image.open('C:/Users/msksb/OneDrive - IE University/Documentos/VS/nlp_app/data/wc_fake_news_2.jpg')
+img_wc_real_news_1 = Image.open('data/wc_real_news_1.jpg')
+img_wc_real_news_2 = Image.open('data/wc_real_news_2.jpg')
+img_wc_fake_news_1 = Image.open('data/wc_fake_news_1.jpg')
+img_wc_fake_news_2 = Image.open('data/wc_fake_news_2.jpg')
 
 
 
