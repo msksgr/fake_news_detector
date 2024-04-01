@@ -180,4 +180,4 @@ with col1:
         # Closing words
         'Thank you for using our Fake News Detector! We hope you find this tool helpful.'
         'For more details about the model, visit our GitHub page:'
-        st.page_link(github_url, label='GitHub')
+        st.page_link(github_url, label='GitHub Repository', icon='🔗')
